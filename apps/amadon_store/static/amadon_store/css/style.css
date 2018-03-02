@@ -1,0 +1,41 @@
+#pagewrap {
+	max-width: 75rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.store {
+	display: block;
+	width: 100%;
+}
+
+.product {
+	display: inline-block;
+	width: 47%;
+	vertical-align: top
+	padding: 1rem;
+	margin: 1rem;
+	text-align: center;
+	background-color: #ccc;
+	vertical-align: top;
+}
+
+.product .title {
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+.product img {
+	max-width: 250px;
+	width: 100%;
+}
+
+.product form {
+	margin: 1rem;
+}
+
+.product form span {
+	display: block;
+	text-align: center;
+	padding: 0.5rem 0;
+}

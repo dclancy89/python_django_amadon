@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amadon Store</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'amadon_store/css/style.css' %}">
+</head>
+<body>
+	<div id="pagewrap">
+		<h1>Amadon Store</h1>
+		<div class="store">
+			<div class="product">
+				<p class="title">Dojo Shirt</p>
+				<img src="{% static 'amadon_store/images/shirt.png' %}" alt="Shirt" />
+				<form action="/amadon/process" method="POST">
+					{% csrf_token %}
+					<input type='hidden' name='product' value='01'>
+					<span>Price: $19.99</span>
+					<label>
+						Quantity:
+						<select name="quantity">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</label>
+					<input type="submit" value="Buy">
+				</form>
+			</div>
+
+			<div class="product">
+				<p class="title">Dojo Hoodie</p>
+				<img src="{% static 'amadon_store/images/hoodie.png' %}" alt="Hoodie" />
+				<form action="/amadon/process" method="POST">
+					{% csrf_token %}
+					<input type='hidden' name='product' value='02'>
+					<span>Price: $29.99</span>
+					<label>
+						Quantity:
+						<select name="quantity">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</label>
+					<input type="submit" value="Buy">
+				</form>
+			</div>
+
+			<div class="product">
+				<p class="title">Dojo Cup</p>
+				<img src="{% static 'amadon_store/images/mug.png' %}" alt="Cup" />
+				<form action="/amadon/process" method="POST">
+					{% csrf_token %}
+					<input type='hidden' name='product' value='03'>
+					<span>Price: $4.99</span>
+					<label>
+						Quantity:
+						<select name="quantity">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</label>
+					<input type="submit" value="Buy">
+				</form>
+			</div>
+
+			<div class="product">
+				<p class="title">Algorithm Book</p>
+				<img src="{% static 'amadon_store/images/book.jpeg' %}" alt="Algorithm Book" />
+				<form action="/amadon/process" method="POST">
+					{% csrf_token %}
+					<input type='hidden' name='product' value='04'>
+					<span>Price: $49.99</span>
+					<label>
+						Quantity:
+						<select name="quantity">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</label>
+					<input type="submit" value="Buy">
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
